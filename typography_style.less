@@ -1,0 +1,46 @@
+@import url(style.less);
+@import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+
+@htmlBackground_color: #226666;
+@footerBackground_color: #7B9F35;
+@mainBackground_color: white;
+// @mainBackground_color: #FFFFFF;
+@breadcrumbBackground_color: #7B9F35;
+@headerBackground_color: #AA3939;
+
+@p_Color: black;
+@a_Color: black;
+@a_normal_color: purple;
+
+body {
+    p,
+    h1,
+    h2,
+    h3,
+    h5 {
+        color: @p_Color;
+    }
+    a {
+        color: @a_normal_color;
+        font-style: italic;
+    }
+    p {
+        font-family: 'Aref Ruqaa', serif;
+        font-size: 1.1em;
+    }
+
+    h1,
+    h2,
+    h3,
+    h5 {
+        font-family: 'Cormorant Garamond', serif;
+    }
+}
+
+.rm-desktop li a {
+    font-family: 'Satisfy', cursive;
+    font-weight: bold;
+    font-size: 1.1em;
+}
