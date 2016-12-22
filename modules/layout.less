@@ -1,7 +1,9 @@
-@import "grid-flex.less";
+@import "grid-float.less";
 @import "grid-helpers.less";
+@import "figure.less";
 
 @maxWidth: 960px;
+
 .row {
     .row();
 }
@@ -9,51 +11,96 @@
 .inner-wrap {
     max-width: @maxWidth;
     .container();
-}
-
-.wrap-all {
     .showGrid(@maxWidth);
 }
 
 .flash-wrap {
     .column(12);
-    // .skullimg {
-    //     .column(12);
-    // }
 }
 
-.outer-wrap.outer-wrap-header {
-    .pull(2.55);
-    .pull-right(2.55);
+.sidebar {
+    .column(4);
+    // .push(1);
+    // background-color: pink;
 }
+
+.main {
+    .column(12);
+}
+
+.breadcrumb-wrap {
+    .column(12);
+    // .push(2);
+}
+
+.sidebar,
+.main {
+    box-sizing: border-box;
+}
+// .outer-wrap.outer-wrap-header {
+//     .pull(2.55);
+//     .pull-right(2.55);
+// }
 
 
 .site-header {
     .column(12);
 }
 
-.navbar2 {
-    .push(2);
-}
-
 .article {
     .column(12);
-    // .push(2);
 }
 
 .site-logo-text {
     .push(4);
 }
 
+//bilder img-sidan
+.new_bild {
+    .figure();
+    .center();
+    // width: 400px;
+}
+//blogg bild1 pos 2
+.new_bild2 {
+    .figure();
+    .left();
+    // width: 400px;
+}
+.new_bild3 {
+    .figure();
+    .right();
+    // margin-top: 250px;
+    // width: 400px;
+}
 
+.new_bild4 {
+    .figure();
+    .center();
+    // margin-top: 250px;
+    // width: 400px;
+}
+
+.new_bild5 {
+    .figure();
+    .left();
+}
+
+.new_bild6 {
+    .figure();
+    .right();
+}
+
+body.route-grid-,
 body.route-grid {
-    .outer-wrap.outer-wrap-main {
-        .row {
-            background: url("../img/grid.png") repeat-y fixed center center;
-        }
+    .inner-wrap.inner-wrap-main {
+        .showGrid(@maxWidth);
+        background: url("https://dbwebb.se/img/grid/grid940x12x60x20-nomargin.png") repeat-y fixed center center;
+        background-color: @mainBackground_color;
+
     }
     .main {
-        .column(6);
+        .column(7);
         .push(1);
         border: 1px solid black;
         margin-top: 20px;
@@ -75,13 +122,15 @@ body.route-grid {
     }
 }
 
-.outer-wrap.outer-wrap-footer {
-    .pull(2.55);
-    .pull-right(2.55);
-}
-
-.footer {
-    .column(12);
+// .footer {
+//     .column(12);
+//
+// }
+// .inner-wrap.inner-wrap-footer {
+//     .column(12);
+// }
+.column.footer-column {
+    .column(4);
 
 }
 
@@ -100,9 +149,9 @@ html {
 //     border: 1px solid black;
 // }
 
-.outer-wrap.outer-wrap-main {
-    .column(12);
-}
+// .outer-wrap.outer-wrap-main {
+//     .column(12);
+// }
 
 body.route-typography {
     .font();
@@ -114,10 +163,50 @@ body.route-typography {
     .typographyTextElements();
 }
 
+html.vgrid .inner-wrap {
+    .showGrid(@maxWidth);
+    background: url("https://dbwebb.se/img/grid/grid940x12x60x20-nomargin.png") repeat-y fixed center center;
+    // .inner-wrap {
+    //     opacity: 0.5;
+    // }
+    &.inner-wrap-main {
+        background-color: @mainBackground_color;
+    }
+
+    &.inner-wrap-header {
+        .showGrid(@maxWidth);
+    }
+
+    &.inner-wrap-breadcrumb {
+        background-color: @breadcrumbBackground_color;
+    }
+}
+
 body {
     .typographyHeadings();
     .typographyOtherElements();
 }
+
+body.route-report-intro,
+body.route-report,
+body.route-analysis-intro,
+body.route-analysis {
+    .main {
+        .column(9);
+        .push(0.6);
+        height: 500px;
+    }
+    .block.toc {
+        h4 {
+            padding-left: 30px;
+        }
+    }
+}
+
+// .main {
+//     overflow: auto;
+//     width: @maxWidth;
+// }
 
 @media screen and (max-width: 797px) {
     .links_cc_copy {

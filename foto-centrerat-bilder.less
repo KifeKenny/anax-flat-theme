@@ -1,0 +1,54 @@
+@import url(style.less);
+
+@footerBackground_color: "none";
+@mainBackground_color: white;
+@headerBackground_color: "none";
+
+
+html {
+    background-image: url(../img/berg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.inner-wrap.inner-wrap-header {
+    background-color: white;
+    .profile {
+        position: absolute;
+        content: url(../img/red_dragon.png);
+        height: 100px;
+        width: 100px;
+        top: 20px;
+    }
+}
+
+.inner-wrap.inner-wrap-footer {
+    background-color: grey;
+}
+
+// .inner-wrap.inner-wrap-breadcrumb {
+//     .row::after {
+//         content: url(../img/diamond.png);
+//         height: 100px;
+//         width: 100px;
+//     }
+// }
+.breadcrumb-wrap {
+    background-color: white;
+    background-image: url("../img/diamond.png");
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: right;
+}
+
+.inner-wrap.inner-wrap-main {
+    background-color: white;
+}
+
+.links_cc_copy {
+    margin-bottom: 1px;
+}
+
+.rm-default.rm-desktop {
+    .push(1);
+}
