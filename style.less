@@ -2,64 +2,68 @@
 * Anax Flat theme.
 */
 @import url(modules.less);
-// class="inner-wrap inner-wrap-breadcrumb"
-// outer-wrap outer-wrap-header
+
 /** --------------------------------------------------------------
  *  header
 */
-@htmlBackground_color: #c3c3c3;
-@footerBackground_color: #747776;
+@htmlBackground_color: white;
+@footerBackground_color: black;
 @mainBackground_color: #FFFFFF;
 // @mainBackground_color: #FFFFFF;
 @breadcrumbBackground_color: #FFFFFF;
-@headerBackground_color: #FFFFFF;
+@headerBackground_color: #2C2F34;
 
-@p_Color: black;
+@p_Color: white;
 @a_Color: black;
 @a_normal_color: purple;
 
 
 .site-header {
-    margin-bottom: 10px;
-    margin-top: 20px;
+    // margin-bottom: 10px;
+    height: 110px;
 }
 .outer-wrap.outer-wrap-header {
     background-color: @headerBackground_color;
-    margin-bottom: 20px;
+    height: 110px;
 
 }
-// .navbar2,
-// .site-logo-text,
-// .profile {
-//     float: left;
-//     // width: 30%;
-// }
-//body text och länk färger
-body {
-    p,
-    h1,
-    h2,
-    h3,
-    h5 {
-        color: @p_Color;
-    }
-    a {
-        color: @a_normal_color;
+
+.site-logo-text-icon {
+    img {
+        height: 100px;
     }
 }
+.navbar2 {
+    margin-top: 35px;
+}
+//body text och länk färger
+// body {
+//     p,
+//     h1,
+//     h2,
+//     h3,
+//     h5 {
+//         color: @p_Color;
+//     }
+//     a {
+//         color: @a_normal_color;
+//     }
+// }
 
 .site-logo-text {
     font-size: 2em;
+    float: left;
 
 
     a {
         text-decoration: none;
-        color: black;
+        color: @p_Color;
     }
 }
 //hmtl_backgrun
 html {
     background-color: @htmlBackground_color;
+    background-image: url("../img/city.jpg");
 }
 // footer 1
 
@@ -68,22 +72,27 @@ html {
 
 }
 
-// .footer {
-//     background-color: @footerBackground_color;
-// }
+.footer {
+    p {
+        color: @p_Color;
+        margin-bottom: 0px;
+    }
+    h4 {
+        color: @p_Color;
+    }
+}
 
 .column.footer-column {
     float: left;
-    // width: 33%;
     height: 200px;
-    // border-right: 1px solid black;
-    // border-left: 1px solid black;
     p {
         padding-left: 5px;
         padding-right: 5px;
+        color: @p_Color;
     }
     h4 {
         padding-left: 20%;
+        color: @p_Color;
     }
     ul {
         padding-left: 70px;
@@ -93,13 +102,25 @@ html {
 
 .inner-wrap.inner-wrap-main {
      background-color: @mainBackground_color;
+     min-height: 500px;
+    //  border: solid black;
+    //  border-radius: 9px;
 }
 /** --------------------------------------------------------------
 *  navbar main
 */
-.rm-desktop li a {
-    padding-top: 10px;
-    color: @a_Color;
+.rm-desktop {
+
+    a {
+        padding-top: 10px;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+    }
+
+    li {
+        color: @p_Color;
+        margin-right: 10px;
+    }
 }
 
 // @navbarItemBgColor: grey;
@@ -127,19 +148,15 @@ html {
 //header size
 .reportheader,
 .skullimg {
-    width: 100.05%;
-    height: 200px;
+    width: 99.8%;
+    height: 400px;
+}
+
+.skullimg {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 // navbar under header
-.inner-wrap.inner-wrap-breadcrumb {
-    background-color: @breadcrumbBackground_color;
-    border: 1px solid black;
-    a {
-        text-decoration: none;
-        color: black;
-        font-size: 25px;
-    }
-}
 
 //sidbar grid-sidan
 body.route-grid-,
@@ -173,22 +190,34 @@ body.route-grid {
     margin-bottom: 10px;
 }
 
+.left {
+    float: left;
+}
 
+.region {
+    overflow: auto;
+}
+
+body.route-tema-intro,
+body.route-tema-Costume,
+body.route-tema {
+    h4 {
+        padding-left: 27px;
+
+    }
+    .next {
+        a {
+            padding-left: 10px;
+        }
+    }
+}
 /** --------------------------------------------------------------
 *  Responsiv design
 */
 
-@media screen and (max-width: 900px) {
-    .site-logo-text {
-        width: 40%;
-    }
-
+@media screen and (max-width: 750px) {
     .navbar2 {
-        width: 50%;
-    }
-
-    .profile {
-        width: 10%;
+        display: none;
     }
 }
 
@@ -198,20 +227,25 @@ body.route-grid {
     }
 }
 
-@media screen and (max-width: 750px) {
-    .footer-column {
+@media screen and (max-width: 644px) {
+    .column.footer-column {
         width: 100%;
     }
 }
 
-@media screen and (max-width: 560px) {
-    .navbar2 {
-        display: none;
+@media screen and (max-width: 838px) {
+    .left {
+        float: none;
     }
+    .figure {
+        float: none;
+    }
+    .figure.left {
+        float: none;
+    }
+
 }
 
-// @media screen and (max-width: 797px) {
-//     .links_cc_copy {
-//         display: none;
-//     }
-// }
+.flash-wrap {
+    margin-bottom: 10px;
+}

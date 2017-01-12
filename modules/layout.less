@@ -14,8 +14,19 @@
     .showGrid(@maxWidth);
 }
 
+.inner-wrap.inner-wrap-flash {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    max-width: 99%;
+}
+
 .flash-wrap {
-    .column(12);
+    // .column(12);
+    // width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: none;
 }
 
 .sidebar {
@@ -28,6 +39,10 @@
     .column(12);
 }
 
+.navbar2 {
+    .push(5);
+}
+
 .breadcrumb-wrap {
     .column(12);
     // .push(2);
@@ -37,11 +52,6 @@
 .main {
     box-sizing: border-box;
 }
-// .outer-wrap.outer-wrap-header {
-//     .pull(2.55);
-//     .pull-right(2.55);
-// }
-
 
 .site-header {
     .column(12);
@@ -49,46 +59,6 @@
 
 .article {
     .column(12);
-}
-
-.site-logo-text {
-    .push(4);
-}
-
-//bilder img-sidan
-.new_bild {
-    .figure();
-    .center();
-    // width: 400px;
-}
-//blogg bild1 pos 2
-.new_bild2 {
-    .figure();
-    .left();
-    // width: 400px;
-}
-.new_bild3 {
-    .figure();
-    .right();
-    // margin-top: 250px;
-    // width: 400px;
-}
-
-.new_bild4 {
-    .figure();
-    .center();
-    // margin-top: 250px;
-    // width: 400px;
-}
-
-.new_bild5 {
-    .figure();
-    .left();
-}
-
-.new_bild6 {
-    .figure();
-    .right();
 }
 
 body.route-grid-,
@@ -117,41 +87,19 @@ body.route-grid {
 }
 
 .block.site-footer {
-    p{
+    p {
         .push(4);
     }
 }
 
-// .footer {
-//     .column(12);
-//
-// }
-// .inner-wrap.inner-wrap-footer {
-//     .column(12);
-// }
+.region {
+    .column(10);
+}
+
 .column.footer-column {
     .column(4);
 
 }
-
-.links_cc_copy {
-    .push(4.4);
-}
-
-//backgrounds färger
-
-html {
-    background-color: grey;
-}
-
-// .wrap-all {
-//     background-color: white;
-//     border: 1px solid black;
-// }
-
-// .outer-wrap.outer-wrap-main {
-//     .column(12);
-// }
 
 body.route-typography {
     .font();
@@ -177,36 +125,32 @@ html.vgrid .inner-wrap {
         .showGrid(@maxWidth);
     }
 
-    &.inner-wrap-breadcrumb {
-        background-color: @breadcrumbBackground_color;
+    &.inner-wrap-flash {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+        max-width: 99%;
     }
+}
+
+html.hgrid .inner-wrap {
+    .font();
+    background: url("https://dbwebb.se/img/grid/horisontal-grid-24.png");
+    // &.inner-wrap-footer {
+    //     background: url("../img/hg.png");;
+    // }
+
+    // &.inner-wrap-header {
+    //     background-color: @headerBackground_color;
+    // }
 }
 
 body {
+    .font();
     .typographyHeadings();
     .typographyOtherElements();
+    .typographyTextElements();
 }
-
-body.route-report-intro,
-body.route-report,
-body.route-analysis-intro,
-body.route-analysis {
-    .main {
-        .column(9);
-        .push(0.6);
-        height: 500px;
-    }
-    .block.toc {
-        h4 {
-            padding-left: 30px;
-        }
-    }
-}
-
-// .main {
-//     overflow: auto;
-//     width: @maxWidth;
-// }
 
 @media screen and (max-width: 797px) {
     .links_cc_copy {
@@ -214,5 +158,14 @@ body.route-analysis {
     }
     .footer {
         overflow: auto;
+    }
+}
+@media screen and (max-width: 909px) {
+    .navbar2 {
+        .column(10);
+        .push(1);
+    }
+    .site-logo-text {
+        .column(1);
     }
 }
